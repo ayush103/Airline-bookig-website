@@ -1,0 +1,262 @@
+<html>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ 
+  <script>
+        function myFunction(imgs) {
+          var expandImg = document.getElementById("expandedImg");
+          var imgText = document.getElementById("imgtext");
+          expandImg.src = imgs.src;
+          imgText.innerHTML = imgs.alt;
+          expandImg.parentElement.style.display = "block";
+        }
+        </script>
+
+ <style>
+   input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #020252;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 60%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width:3%) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+   footer{
+
+position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #343a40;
+   color: white;
+   text-align: center;}
+
+</style>
+</head>
+<body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.jpg" alt="logo" style="width:40px;">
+                </a>
+            <ul class="navbar-nav navbar-right" >
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Booking.html">Book</a>
+                  </li>
+                  <li class="nav-item">
+                      <img src="login.png" style="float: right;border-radius: 50%; width: 7%;height: 7%; margin-left: 100%;" onclick="document.getElementById('id01').style.display='block'"></img>                  </li>
+                    </li>
+            </ul>
+        </nav>
+
+        <!-- <div class="container-fluid" style="background-image: url(bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec pretium vulputate sapien nec sagittis aliquam malesuada. Adipiscing elit pellentesque habitant morbi tristique senectus et netus et. Euismod in pellentesque massa placerat duis ultricies. Morbi leo urna molestie at elementum eu facilisis sed odio. Nullam eget felis eget nunc. Justo nec ultrices dui sapien eget mi. Lobortis feugiat vivamus at augue eget. Vitae purus faucibus ornare suspendisse sed nisi lacus sed. Molestie at elementum eu facilisis sed odio morbi quis commodo. Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper. Ac ut consequat semper viverra nam libero justo laoreet sit. Dolor purus non enim praesent elementum facilisis leo vel. Et tortor consequat id porta.</p>
+            
+        </div> -->
+        <div id="id01" class="modal">
+  
+            <form class="modal-content animate" action="/action_page.php">
+               <div class="imgcontainer">
+                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAqFBMVEUQG0L///8AADcOGUEACDoMF0AAADkADjwGEz4ACzsKFT8ADjsAADUABjoADTtNVW8cJ03o6e4WIUmfo7T29vgjLVLv8PXb3eUqM1UeJklGTmc8RmQ3QF3GyNDAw86Kj6Bkan+ytL/S1t2amqhTWW9wd44wOFg3QmWnrLleZX3u7+17gZKPk6B6gZinqbHW1tyMk6cAAC9oa3x0doStsb6CipZ3eIJJUm8N558mAAADY0lEQVR4nO3aW3eaQBSGYWBABhQRRLSi4CFarUlMmqT5//+sCKJoTqsX1RV4n0vEtZiPmb0HVFEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIptmlJ8dZJxiSu5Gvlj6EamIz85RehOx6xwCnI09rx+nAwc+4MzbF1OprNux7rodV2SPlEz/bnvvPOxaLZ6yWx3wsxtfblivinrJshDUMeufj5Iw1KGXW//uTf5aKZ8d3JQjFENF41yVRBS8xdxkVCawbqqGYjW/DDKoLtsHo43/Wg+U4+mw6+7x3dljvrHgcY/nWyg0hLuqnRcDVa96tbEtCqufx3H2n+yDCHt0WYclhJIa4H8rHl+e0K7LY03vBOt5WYWlBNQZ2unwtuDHaMxKd/06b13EkBaJn5o177G/86w7s6GfbIOEr/S62DPaEWzjyLYuq2q9sRTQl9O34/geaRf++Iupmm8hG8TCF9k8+vvVoYhF/3zCLZrWY91UBBWND7tB9NRo+It8S1zMC/vC7xlZZ8UPyFlUm6S8bB+IQhhOq/lJulNjHrVg3QavLotLSo3yXDzuK8IwhaKf93Lu4jGg3rr649JuUnO/TQEo9nwI78OXVI83qZPC76j/S4XhYdGo9l7XW29eNSufnUQ1vNuTzBptE42jfdJnE8MbyMr3yqFkdXD8Mlv9brvbBrVMKl8BoafbxSD1aDtvPck2V9UPgP78Hr1Xti2G5++R1GDbmRWviDIqFgAXakYziD5VY5g9iTb177C/89a7+98sNzNeem4z4epEHaX7covhJS+KG55/nJZsfSHIoRVo1n5dbCjv+wHvCleH2q/iwy2y3psmvVVPl4vMvdHtKfDYljU43WSGefDjYsIFO1PlkEwn8Y3ddgpK8Lfv0JZHDPI58Gs43eUWpQDe7DNd0Li0AC0RZZBVzdqkcDu3xjevgUcDuUZhJMq/9R4ojnMbno4OVa/9nq3a+ov67AzyFg32TQY947z3uh001ym1f3R/Zx1l2XwYJaO2XoSqIvaLAXF2WRLISo1QV8x9PXYrcPPjbm8Jo7P/oQn2j2/Nksh3SPt3ilvtPMR12OTvCe0KN6+1uAB+VNte1mjef8BUZ/yBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgH/3FxTOLM7CFbGGAAAAAElFTkSuQmCC" alt="Avatar" class="avatar">
+               </div>
+           
+               <div class="container">
+                 <label for="uname"><b>Username</b></label>
+                 <input type="text" placeholder="Enter Username" name="uname" required>
+           
+                 <label for="psw"><b>Password</b></label>
+                 <input type="password" placeholder="Enter Password" name="psw" required>
+                   
+                 <button type="submit">Login</button>
+                 <label>
+                   <input type="checkbox" checked="checked" name="remember"> Remember me
+                 </label>
+               </div>
+           
+               <div class="container" style="background-color:#f1f1f1">
+                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                 <span class="psw">Forgot <a href="#">password?</a></span>
+               </div>
+             </form>
+           </div>
+           
+           <script>
+           // Get the modal
+           var modal = document.getElementById('id01');
+           
+           // When the user clicks anywhere outside of the modal, close it
+           window.onclick = function(event) {
+               if (event.target == modal) {
+                   modal.style.display = "none";
+               }
+           }
+           </script>
+       
+        <div class="container-fluid" style="color:white;background-image: url('background.gif'); background-repeat: no-repeat;background-size: 100% 100%;">
+            <div class="jumbotron" style="background-color: #00040f;">
+                  <h1>Leviosa Airways</h1>      
+                </div>
+                <p>This is some text.</p>      
+                <p>This is another text.</p>      
+                
+                <br><br><br><br><br><br>
+              <div class="row">
+                    <div class="col-sm-3">
+                      <img src="image1.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+                    </div>
+                    <div class="col-sm-3">
+                      <img src="mexico.jpeg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+                    </div>
+                    <div class="col-sm-3">
+                      <img src="russia.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+                    </div>
+                    <div class="col-sm-3">
+                      <img src="china.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+                    </div>
+                  </div>
+                  
+                  <!-- <div class="container">
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                    <img id="expandedImg" style="width:100%">
+                    <div id="imgtext"></div> -->
+            </div>
+
+                  <footer>
+                     <div class="row">
+                         <div class="col-sm-4">
+                            Leviosa Airways
+                         </div>
+
+                         <div class="col-sm-4">
+                                Leviosa Airways
+                             </div>
+
+                             <div class="col-sm-4">
+                                    Leviosa Airways
+                                 </div>
+                     </div>
+                  </footer>
+              
+</body>
+
+</html>

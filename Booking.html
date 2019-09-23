@@ -1,0 +1,196 @@
+<html>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ 
+  <script>
+        function myFunction(imgs) {
+          var expandImg = document.getElementById("expandedImg");
+          var imgText = document.getElementById("imgtext");
+          expandImg.src = imgs.src;
+          imgText.innerHTML = imgs.alt;
+          expandImg.parentElement.style.display = "block";
+        }
+        </script>
+
+ <style>
+   img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+   footer{
+
+position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #343a40;
+   color: white;
+   text-align: center;}
+
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+        
+
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none ;    background-color: #abaecc" id="mySidebar">
+                <button class="w3-bar-item w3-button w3-large"
+                onclick="w3_close()">&times;</button>
+                <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                <a href="Homepage.html" class="w3-bar-item w3-button">Back</a>
+              </div>
+              
+              <div id="main">
+              
+              <div class="w3-teal">
+                <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()" style="text-align: left">&#9776;</button>
+                <div class="w3-container">
+                  <h1></h1>
+                </div>
+              </div>
+              
+              <script>
+              function w3_open() {
+                document.getElementById("main").style.marginLeft = "25%";
+                document.getElementById("mySidebar").style.width = "25%";
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("openNav").style.display = 'none';
+              }
+              function w3_close() {
+                document.getElementById("main").style.marginLeft = "0%";
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("openNav").style.display = "inline-block";
+              }
+              </script>              
+       <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.jpg" alt="logo" style="width:40px;">
+                </a>
+            <ul class="navbar-nav navbar-right" >
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Book</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Login/SignUp</a>
+                  </li>
+            </ul>
+        </nav>-->
+
+        <!-- <div class="container-fluid" style="background-image: url(bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec pretium vulputate sapien nec sagittis aliquam malesuada. Adipiscing elit pellentesque habitant morbi tristique senectus et netus et. Euismod in pellentesque massa placerat duis ultricies. Morbi leo urna molestie at elementum eu facilisis sed odio. Nullam eget felis eget nunc. Justo nec ultrices dui sapien eget mi. Lobortis feugiat vivamus at augue eget. Vitae purus faucibus ornare suspendisse sed nisi lacus sed. Molestie at elementum eu facilisis sed odio morbi quis commodo. Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper. Ac ut consequat semper viverra nam libero justo laoreet sit. Dolor purus non enim praesent elementum facilisis leo vel. Et tortor consequat id porta.</p>
+            
+        </div> -->
+       
+          <div class="container-fluid" style="color:white;background-image: url('background.gif'); background-repeat: no-repeat;background-size: 100% 100%;">
+                <div class="jumbotron" style="background-color: #00040f;">
+                  <h1>Leviosa Airways</h1>      
+                </div>
+                <p>This is some text.</p>      
+                <p>This is another text.</p>      
+                
+                <div style="background-image: url('bg.jpg');margin:auto;width:80%;">
+                  <div style="background-color: white;color:black;border-radius:10px">
+                    <form method = "get">
+                      <div class="container" style="">
+                      <h3 style="margin-top: 1% "> Flights:</h3> 
+                        <div class="row justify-content-center" style="" >
+                          <div class = "col-sm-4" >
+                            <input type="radio" name = "flight-type" value = "Round trip" checked/> Round trip
+                          </div>
+                          <div class = "col-sm-4">
+                            <input type="radio" name = "flight-type" value = "One way"/> One way
+                          </div>
+                          <div class = "col-sm-4">
+                            <input type="radio" name = "flight-type" value = "multi-city"/> Multi-city
+                          </div>
+                        </div>
+                        <hr><br>
+                        <div class="row" style="margin-bottom: 1%;">
+                          <div class="col-sm-3 col-xs-12" >
+                            <input type = "text" name = "from" placeholder="From" >
+                          </div>
+                          <div class="col-sm-3 col-xs-12">
+                            <input type = "text" name = "from" placeholder="To" >
+                          </div>
+                           <div class="col-sm-3 col-xs-12">
+                            Depart:
+                            <input type="date" name="Depart" value="20-08-2019">
+                          </div>
+                           <div class="col-sm-3 col-xs-12">
+                            Return:
+                            <input type="date" name="Return" value="20-08-2019">
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row" style="margin-bottom: 1%;">
+                          <div class="col-sm-3 col-xs-12">
+                            <input type="text" name="Passenger" placeholder="Passenger">     
+                          </div>
+                           <div class="col-sm-3 col-xs-12">
+                            <input type="Text" name="Promocode" placeholder="Promo code">
+                          </div>
+                          <div class="col-sm-3 col-xs-12">
+                            <input type="checkbox" name="Premium only">Premium only
+                          </div>
+                            <div class="col-sm-3 col-xs-12" >
+                            <input type="button" name="Show flights" onclick="" value="Show Flights" style="background-color: #ff8c00; ">
+                          </div>    
+                        </div>
+                        <br>
+                      
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+              <div class="row">
+                    <div class="col-sm-3">
+                      <img src="bg.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+                    </div>
+                    <div class="col-sm-3">
+                      <img src="bg.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+                    </div>
+                    <div class="col-sm-3">
+                      <img src="bg.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+                    </div>
+                    <div class="col-sm-3">
+                      <img src="bg.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+                    </div>
+                  </div>
+                  
+                  <!-- <div class="container">
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                    <img id="expandedImg" style="width:100%">
+                    <div id="imgtext"></div> -->
+            </div>
+
+                  <footer>
+                     <div class="row">
+                         <div class="col-sm-4">
+                            Leviosa Airways
+                         </div>
+
+                         <div class="col-sm-4">
+                                Leviosa Airways
+                             </div>
+
+                             <div class="col-sm-4">
+                                    Leviosa Airways
+                                 </div>
+                     </div>
+                  </footer>
+              
+</body>
+
+</html>
